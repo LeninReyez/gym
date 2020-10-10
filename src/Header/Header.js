@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Header = () => {
     const [greeting, setGreeting] = useState(
-      'Hello'
+      'Hello World'
     );
    
     return (
