@@ -41,3 +41,17 @@ nav {
   border: 2px dotted black;
   min-height: 150px;
 }
+
+/*Nav*/
+.card-parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card {
+  border: 2px dotted black;
+  width: 50%;
+  min-height: 150px;
+}
