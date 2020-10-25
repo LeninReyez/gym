@@ -55,3 +55,7 @@ nav {
   width: 50%;
   min-height: 150px;
 }
+
+li {
+  list-style: none;
+}
