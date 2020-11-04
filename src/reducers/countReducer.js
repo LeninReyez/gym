@@ -11,6 +11,7 @@ const countReducer = (state = initialState, action) => {
       console.log("REDUCER - DECREMENT");
       return decrementData(state);
     default:
+      console.log(`countReducer = ${state.counterData}`);
       return state;
   }
 };

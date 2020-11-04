@@ -1,12 +1,16 @@
-import React from "react";
-import ApiTest from "../api/ApiTest";
-import Football from "../api/Football";
+import React, { useEffect, useState } from "react";
 
-function Contact() {
+function Contact(props) {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    setData(props.listData);
+  });
+
   return (
     <div>
-      <h1>Contact</h1>
-      <ApiTest />
+      <h1>Contact List</h1>
+      {data}
     </div>
   );
 }

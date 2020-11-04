@@ -7,11 +7,11 @@ import * as serviceWorker from "./serviceWorker";
 //Redux
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import countReducer from "./reducers/reducer";
+import combineReducers from "./reducers/combineReducers";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={createStore(countReducer)}>
+    <Provider store={createStore(combineReducers)}>
       <AppContainer />
     </Provider>
   </React.StrictMode>,

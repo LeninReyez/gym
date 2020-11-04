@@ -2,9 +2,11 @@ import About from "../components/About";
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
-  console.log(`mapStateToProps = ${state.counterData}`);
+  console.log(
+    `about-ctr - mapStateToProps = ${state.countReducer.counterData}`
+  );
   return {
-    counterData: state.counterData
+    counterData: state.countReducer.counterData
   };
 };
 

@@ -6,6 +6,7 @@ const MapStateToProps = (state) => {
     counterData: state.counterData
   };
 };
+
 const AppContainer = connect(MapStateToProps)(App);
 
 export default AppContainer;
