@@ -1,17 +1,21 @@
+//Redux
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import combineReducers from "./reducers/combineReducers";
+
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import AppContainer from "./container/App-ctr";
 import * as serviceWorker from "./serviceWorker";
+import thunkMiddleware from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-//Redux
-import { Provider } from "react-redux";
-import { createStore } from "redux";
-import combineReducers from "./reducers/combineReducers";
+const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware));
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={createStore(combineReducers)}>
+    <Provider store={createStore(combineReducers, composedEnhancer)}>
       <AppContainer />
     </Provider>
   </React.StrictMode>,
