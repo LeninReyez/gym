@@ -1,5 +1,5 @@
 import About from "../components/About";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 
 const mapStateToProps = (state) => {
   console.log(

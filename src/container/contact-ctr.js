@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleIncrementClick: () => {
+    handleGetData: () => {
       dispatch({ type: "GET_DATA" });
     }
   };

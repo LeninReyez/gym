@@ -4,10 +4,12 @@ import Nav from "./Nav/Nav";
 import Home from "./components/Home";
 import AboutContainer from "./container/about-ctr";
 import ContactContainer from "./container/contact-ctr";
+import Init from "./components/Init";
 import Contact from "./components/Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  Init();
   return (
     <Router>
       <div className="App">

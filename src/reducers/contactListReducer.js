@@ -1,4 +1,4 @@
-import fetchData from "../api/ApiTest";
+import apiCall from "../api/ApiTest";
 
 const initialState = {
   listData: null
@@ -6,11 +6,8 @@ const initialState = {
 
 const contactListReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_DATA":
-      console.log(
-        `**************************contactListReducer =  ${state.listData}`
-      );
-
+    case "FETCH":
+      console.log("inside switch (reducer) ");
       return getData(state);
     default:
       return state;
@@ -18,8 +15,13 @@ const contactListReducer = (state = initialState, action) => {
 };
 
 const getData = (state, action) => {
+  console.log("Inside getData");
+  let data = null;
+  const apiResponse = apiCall().then((res) => (data = res));
+  console.log("OUTISIDE THEN");
+  console.log(apiResponse);
   return Object.assign({}, state, {
-    listData: action.result
+    listData: data
   });
 };
 
